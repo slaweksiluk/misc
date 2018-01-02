@@ -1,0 +1,11 @@
+   GNAT GPL is now installed. To launch it, you must put
+      /usr/gnat/bin
+   in front of your PATH environment variable. The following
+   commands enable you to do this:
+      PATH="/usr/gnat/bin:$PATH"; export PATH  (Bourne shell)
+      setenv PATH "/usr/gnat/bin:$PATH"        (C shell)
+   Thank you for installing GNAT GPL Edition!
+
+
+# Command
+export PATH=$PATH:/usr/gnat/bin

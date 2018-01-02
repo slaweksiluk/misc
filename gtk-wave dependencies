@@ -1,0 +1,2 @@
+# Ubuntu 14.04 LTS
+sudo apt-get install tcl-dev tk-dev gperf liblzma-dev prompt

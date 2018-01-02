@@ -1,0 +1,2 @@
+# Clones revision X of gtkwave
+git svn clone -rX:HEAD svn://svn.code.sf.net/p/gtkwave/code/ gtkwave-code
