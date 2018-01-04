@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets>
+  <snippet>
+    <accelerator><![CDATA[<Primary><Shift>d]]></accelerator>
+    <text><![CDATA[$GEDIT_CURRENT_LINE
+${0}$GEDIT_CURRENT_LINE]]></text>
+    <description>duplicate line</description>
+  </snippet>
+  <snippet>
+    <accelerator><![CDATA[<Primary><Shift>c]]></accelerator>
+    <text><![CDATA[$GEDIT_SELECTED_TEXT
+$GEDIT_SELECTED_TEXT
+]]></text>
+    <description>duplicate selection</description>
+  </snippet>
+  <snippet>
+    <accelerator><![CDATA[<Primary>e]]></accelerator>
+    <text><![CDATA[( $GEDIT_SELECTED_TEXT )]]></text>
+    <description>surround</description>
+  </snippet>
+</snippets>
