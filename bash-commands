@@ -1,2 +1,9 @@
 # Check which package contains file named abc.xyz
 apt-file find abc.xyz
+
+# szuka frazy ignorujac plikir bunarnie rekurswnie ignorujac pliku z kocowka
+# '~' i wywswietla jedna linie przed szukana fraza
+grep -I -r "attribute keep_hierarchy : string;" -A 1 --exclude=*~
+
+# Usuwa w podkatlagoch pliki z rozszerzenime ghw
+find . -name "*.ghw" -type f -delete

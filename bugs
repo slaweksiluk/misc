@@ -1,0 +1,6 @@
+[Vivado]
+	Version: 2014.4
+	Description: When running ILA trig in hardware manager program crashes 
+		(window dissapear)
+	Reason: There empty virutal buses or sth in hw wcfg file
+	Solution: Remove hw wcfg file (in hw not sim)
