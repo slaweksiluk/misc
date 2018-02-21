@@ -1,5 +1,6 @@
 # Check which package contains file named abc.xyz
 apt-file find abc.xyz
+yum whatprovides "*makecell.sty*"
 
 # szuka frazy ignorujac plikir bunarnie rekurswnie ignorujac pliku z kocowka
 # '~' i wywswietla jedna linie przed szukana fraza
