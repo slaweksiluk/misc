@@ -7,6 +7,9 @@ git update-index --assume-unchanged [file]
 
 git add -u . # dodaje do komita rowniez usuniete pliki
 
+# Add no untracked content
+git add -u
+
 git ls-files | xargs |wc -l # ile lini kodu w repo?
 
 # drukuje 10 k=komitow jednoliniowych
