@@ -44,7 +44,11 @@ git diff 0.6.7 0.6.8 --stat -C HEAD HEAD^^
 # Pokjauzje orznice miedzy tagami pliku o zmienionej nazwie/latloagu
 git diff 0.6.7:./top/euclid_spw_top.ucf 0.6.8:./ucf/euclid_spw_top.uc
 
-
+# Show list of files differenced between branches
+git diff --name-status branch1 branch2
+>M file1
+>M file2
+>D file3
 
 #A simple command already solved the problem for me if I assume that all changes are committed in both branches A and B:
 git checkout A
