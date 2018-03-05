@@ -4,12 +4,18 @@
 
 # Paramaters
 GHDL_SRC_DIR="$HOME/git/github/ghdl"
-GCC_SRC_DIR="$HOME/sources/gcc-7.1.0"
+GCC_SRC_DIR="$HOME/sources/gcc-7.3.0"
 INSTALL_PREFIX="$HOME/install_prefix"
 
 echo $GHDL_SRC_DIR
 echo $GCC_SRC_DIR
 echo $INSTALL_PREFIX
+
+echo "Check for necessary commnads"
+if ! [ -x "$(command -v g++)" ]; then
+  echo 'Error: g++ is not installed.' >&2
+  exit 1
+fi
 
 # Exit on error
 #set -e
