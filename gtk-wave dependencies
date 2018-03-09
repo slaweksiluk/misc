@@ -1,2 +1,5 @@
 # Ubuntu 14.04 LTS
 sudo apt-get install tcl-dev tk-dev gperf liblzma-dev prompt
+
+# Fedora 27 (gtk3)
+sudo dnf install tk-devel gperf xz-devel gtk2-devel
