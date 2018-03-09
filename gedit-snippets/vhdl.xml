@@ -1,0 +1,392 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="vhdl">
+  <snippet>
+    <text><![CDATA[<= ]]></text>
+    <description>arrow</description>
+    <tag>..</tag>
+  </snippet>
+  <snippet>
+    <description>assign logic 0</description>
+    <text><![CDATA[${1}		<= '0' ${2:after ADL};${0}]]></text>
+    <tag>a0</tag>
+  </snippet>
+  <snippet>
+    <description>assign logic 1</description>
+    <text><![CDATA[${1}		<= '1' ${2:after ADL};${0}]]></text>
+    <tag>a1</tag>
+  </snippet>
+  <snippet>
+    <description>assign others </description>
+    <text><![CDATA[${1}		<= (others => ${2:'0'}) ${3:after ADL}${0};]]></text>
+    <tag>ao</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[--$GEDIT_CURRENT_LINE
+$0]]></text>
+    <accelerator><![CDATA[<Primary><Alt>c]]></accelerator>
+    <description>comment</description>
+  </snippet>
+  <snippet>
+    <description>constant ADL + LDL</description>
+    <text><![CDATA[constant LDL	: time := CLK_PERIOD * 10;
+constant ADL	: time := CLK_PERIOD / 5;
+${0}]]></text>
+    <tag>nd</tag>
+  </snippet>
+  <snippet>
+    <description>constant boolean</description>
+    <text><![CDATA[constant ${1}	: boolean := ${2:false};
+${0}]]></text>
+    <tag>nb</tag>
+  </snippet>
+  <snippet>
+    <description>constant natural</description>
+    <text><![CDATA[constant ${1}	: natural := ${2};
+${0}]]></text>
+    <tag>nn</tag>
+  </snippet>
+  <snippet>
+    <description>constant slv</description>
+    <text><![CDATA[constant ${1}	: std_logic_vector(${2}-1 downto 0) := ${3};
+$0]]></text>
+    <tag>nv</tag>
+  </snippet>
+  <snippet>
+    <description>constant time</description>
+    <text><![CDATA[constant ${1}	: time := ${2} ns;
+${0}]]></text>
+    <tag>nt</tag>
+  </snippet>
+  <snippet>
+    <description>conv to natural</description>
+    <text><![CDATA[${1}	<= to_integer(unsigned(${2}));
+$0]]></text>
+    <tag>cn</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[${1}	<= std_logic_vector(to_unsigned(${2}, ${1}${3}'length));${0}]]></text>
+    <description>conv to std_logic_vector</description>
+    <tag>cv</tag>
+  </snippet>
+  <snippet>
+    <description>duplicate and comment</description>
+    <accelerator><![CDATA[<Primary><Alt>d]]></accelerator>
+    <text><![CDATA[--$GEDIT_CURRENT_LINE
+$0$GEDIT_CURRENT_LINE]]></text>
+  </snippet>
+  <snippet>
+    <description>entity</description>
+    <text><![CDATA[library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+--use IEEE.NUMERIC_STD.ALL;
+
+entity ${1:text} is
+	Generic ( 
+			
+	);
+    Port (
+    	clk		: in std_logic;
+    	rst		: in std_logic
+    );
+end ${1};
+architecture ${1}_arch of ${1} is
+
+
+begin
+$0
+
+
+end ${1}_arch;]]></text>
+    <tag>e</tag>
+  </snippet>
+  <snippet>
+    <description>entity pkg</description>
+    <text><![CDATA[library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+package ${1:pkg_name}_pkg is
+
+end ${1}_pkg;
+package body ${1}_pkg is
+$0
+end ${1}_pkg;]]></text>
+    <tag>ep</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[fsm_proc: process(clk) begin
+if rising_edge(clk) then
+	if rst = '1' then
+		state	<= IDLE_STATE;
+	
+	else
+		case state is
+		when IDLE_STATE =>
+			if change = '1' then
+				state	<= NEXT_STATE;
+			end if;
+		
+		when NEXT_STATE =>
+			state		<= IDLE_STATE;
+		when others =>
+		end case;
+	end if;
+end if;
+end process;]]></text>
+    <description>FSM</description>
+    <tag>f</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[function ${1}(
+	${2: arg : std_logic_vector}
+	) return ${3:natural} is
+	variable v : natural := 0;
+begin
+end function;
+${0}]]></text>
+    <description>function</description>
+    <tag>u</tag>
+  </snippet>
+  <snippet>
+    <description>generic natural</description>
+    <text><![CDATA[${1}		: natural 	:= ${2};
+$0]]></text>
+    <tag>gn</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[${1:ADL}		: time 	:= ${2:500 ps};
+$0]]></text>
+    <description>generic time</description>
+    <tag>gt</tag>
+  </snippet>
+  <snippet>
+    <description>header</description>
+    <text><![CDATA[--------------------------------------------------------------------------------
+-- Company: Astri Polska
+-- Engineer: Slawomir Siluk slawomir.siluk@astripolska.pl
+-- 
+-- Create Date: $(1:date)
+-- Module Name: $GEDIT_CURRENT_DOCUMENT_NAME
+-- Language: VHDL
+-- Description: 
+-- $0
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+--------------------------------------------------------------------------------]]></text>
+    <tag>h</tag>
+  </snippet>
+  <snippet>
+    <description>input std_logic</description>
+    <text><![CDATA[$1		: in std_logic;
+$0]]></text>
+    <tag>il</tag>
+  </snippet>
+  <snippet>
+    <description>input std_logic_vector</description>
+    <text><![CDATA[${1:name}	: in std_logic_vector($2-1 downto 0);
+$0]]></text>
+    <tag>iv</tag>
+  </snippet>
+  <snippet>
+    <description>library astri</description>
+    <text><![CDATA[library astri_hdl_lib;
+use astri_hdl_lib.${1:common_pkg}.all;
+$0]]></text>
+    <tag>la</tag>
+  </snippet>
+  <snippet>
+    <description>library use xil_defaultlib</description>
+    <text><![CDATA[use xil_defaultlib.${1:common_pkg}.all;$0]]></text>
+    <tag>lux</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[library work;
+use work.${1:common_pkg}.all;
+$0]]></text>
+    <description>library work</description>
+    <tag>lw</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[library xil_defaultlib;
+use xil_defaultlib.${1:common_pkg}.all;
+$0]]></text>
+    <description>library xil_defaultlib</description>
+    <tag>lx</tag>
+  </snippet>
+  <snippet>
+    <description>loop</description>
+    <accelerator><![CDATA[<Primary>e]]></accelerator>
+    <text><![CDATA[for ${1:i} in ${2:0} to loop
+	$GEDIT_SELECTED_TEXT
+end loop;
+$0
+]]></text>
+  </snippet>
+  <snippet>
+    <description>New snippet</description>
+    <text><![CDATA[ after ADL$0]]></text>
+    <tag>ad</tag>
+  </snippet>
+  <snippet>
+    <description>New snippet</description>
+    <text><![CDATA[<div class="${1:text}">This div has class: ${1}</div>]]></text>
+    <tag>ex</tag>
+  </snippet>
+  <snippet>
+    <description>New snippet</description>
+    <text><![CDATA[use work.${1:common_pkg}.all;$0]]></text>
+    <tag>luw</tag>
+  </snippet>
+  <snippet>
+    <description>New snippet</description>
+    <text><![CDATA[signal ${1}	: boolean := false;
+$0]]></text>
+    <tag>sb</tag>
+  </snippet>
+  <snippet>
+    <description>output std_logic</description>
+    <text><![CDATA[$1		: out std_logic;
+$0]]></text>
+    <tag>ol</tag>
+  </snippet>
+  <snippet>
+    <description>output std_logic_vector</description>
+    <text><![CDATA[${1}	: out std_logic_vector($2-1 downto 0);
+$0]]></text>
+    <tag>ov</tag>
+  </snippet>
+  <snippet>
+    <description>output unsigned</description>
+    <text><![CDATA[${1}	: out unsigned($2-1 downto 0);$0]]></text>
+    <tag>ou</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[${1}_proc: process(clk) begin
+if rising_edge(clk) then
+	if ce = '1' then
+		${2}
+	end if;
+end if;
+end process;
+$0]]></text>
+    <description>reg ce</description>
+    <tag>pe</tag>
+  </snippet>
+  <snippet>
+    <description>reg clk</description>
+    <text><![CDATA[${1}_proc: process(clk) begin
+if rising_edge(clk) then
+	${2}
+end if;
+end process;
+$0]]></text>
+    <tag>pc</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[_proc: process(clk) begin
+if rising_edge(clk) then
+	if rst = '1' then
+	
+	else
+	
+	end if;
+end if;
+end process;]]></text>
+    <description>reg rst</description>
+    <tag>pr</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[_proc: process(clk) begin
+if rising_edge(clk) then
+	if rst = '1' then
+	
+	elsif ce = '1' then
+	
+	end if;
+end if;
+end process;]]></text>
+    <description>reg rst ce</description>
+    <tag>p</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[assert ${1} = I
+ report " <<<FAILURE>>> ${2: not matching on index:} " & integer'image(I)
+ severity failure;
+$0]]></text>
+    <description>report failure</description>
+    <tag>rf</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[wait for LDL;
+assert false
+ report " <<<SUCCESS>>> "
+ severity failure;
+wait;
+$0]]></text>
+    <description>report success</description>
+    <tag>rs</tag>
+  </snippet>
+  <snippet>
+    <description>signal bool</description>
+    <text><![CDATA[signal ${1}		: boolean := false;
+$0]]></text>
+    <tag>so</tag>
+  </snippet>
+  <snippet>
+    <description>signal natural</description>
+    <text><![CDATA[signal ${1}		: natural ${2:range 0 to};
+$0]]></text>
+    <tag>sn</tag>
+  </snippet>
+  <snippet>
+    <description>signal std_logic</description>
+    <text><![CDATA[signal ${1}		: std_logic;$0]]></text>
+    <tag>sl</tag>
+  </snippet>
+  <snippet>
+    <description>signal std_logic_vector</description>
+    <text><![CDATA[signal ${1}		: std_logic_vector(${2}-1 downto 0);$0]]></text>
+    <tag>sv</tag>
+  </snippet>
+  <snippet>
+    <description>signal unsigned</description>
+    <text><![CDATA[signal ${1}		: unsigned(${2}-1 downto 0)${3: := (others => '0')};$0]]></text>
+    <tag>su</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[type state_t is 	(
+						IDLE_STATE
+					);
+signal state	: state_t := IDLE_STATE;
+$0]]></text>
+    <description>state type</description>
+    <tag>ts</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[variable ${1}		: natural ${2:range 0 to};$0	]]></text>
+    <description>variable natural</description>
+    <tag>vn</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[variable ${1}		: std_logic_vector(${2}-1 downto 0) := (others => '0');
+$0
+]]></text>
+    <description>variable std_logic_vector</description>
+    <tag>vv</tag>
+  </snippet>
+  <snippet>
+    <description>wait for</description>
+    <text><![CDATA[wait for ${1:LDL}$0;]]></text>
+    <tag>wf</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[wait until rising_edge(clk)${1: and };$0]]></text>
+    <description>wait until re(clk)</description>
+    <tag>wu</tag>
+  </snippet>
+</snippets>
