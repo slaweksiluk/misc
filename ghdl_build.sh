@@ -36,7 +36,7 @@ make -j2 &&
 make install MAKEINFO=true
 
 ## Install ghdl libs
-cd $GHDL_SRC_DIR &&
+cd $GHDL_SRC_DIR/build &&
 make ghdllib &&
 make install
 
