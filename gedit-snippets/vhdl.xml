@@ -1,51 +1,49 @@
 <?xml version='1.0' encoding='utf-8'?>
 <snippets language="vhdl">
   <snippet>
-    <tag>a0</tag>
-    <description>assign logic 0</description>
     <text><![CDATA[${1}	<= '0' ${2:after ADL};
 ${0}]]></text>
+    <tag>a0</tag>
+    <description>assign logic 0</description>
   </snippet>
   <snippet>
-    <tag>a1</tag>
-    <description>assign logic 1</description>
     <text><![CDATA[${1}	<= '1' ${2:after ADL};
 ${0}]]></text>
+    <tag>a1</tag>
+    <description>assign logic 1</description>
   </snippet>
   <snippet>
-    <tag>ao</tag>
-    <description>assign others </description>
     <text><![CDATA[${1}	<= (others => ${2:'0'}) ${3:after ADL};
 ${0}]]></text>
+    <tag>ao</tag>
+    <description>assign others </description>
   </snippet>
   <snippet>
-    <tag>od</tag>
-    <description>constant ADL + LDL</description>
     <text><![CDATA[constant LDL	: time := CLK_PERIOD * 10;
 constant ADL	: time := CLK_PERIOD / 5;
 ${0}]]></text>
+    <tag>od</tag>
+    <description>constant ADL + LDL</description>
   </snippet>
   <snippet>
-    <tag>on</tag>
-    <description>constant natural</description>
     <text><![CDATA[constant ${1}	: natural := ${2};
 ${0}]]></text>
+    <tag>on</tag>
+    <description>constant natural</description>
   </snippet>
   <snippet>
-    <tag>cn</tag>
-    <description>conv to natural</description>
     <text><![CDATA[${1}	<= to_integer(unsigned(${2}));
 $0]]></text>
+    <tag>cn</tag>
+    <description>conv to natural</description>
   </snippet>
   <snippet>
-    <tag>cv</tag>
     <description>conv to std_logic_vector</description>
+    <tag>cv</tag>
     <text><![CDATA[${1}	<= std_logic_vector(to_unsigned(${2}, ${1}'length));
 $0]]></text>
   </snippet>
   <snippet>
-    <tag>e</tag>
-    <description>entity</description>
     <text><![CDATA[library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 --use IEEE.NUMERIC_STD.ALL;
@@ -67,10 +65,12 @@ $0
 
 
 end ${1}_arch;]]></text>
+    <tag>e</tag>
+    <description>entity</description>
   </snippet>
   <snippet>
-    <tag>f</tag>
     <description>FSM</description>
+    <tag>f</tag>
     <text><![CDATA[fsm_proc: process(clk) begin
 if rising_edge(clk) then
 	if rst = '1' then
@@ -92,20 +92,18 @@ end if;
 end process;]]></text>
   </snippet>
   <snippet>
-    <tag>gn</tag>
-    <description>generic natural</description>
     <text><![CDATA[${1}		: natural 	:= ${2};
 $0]]></text>
+    <tag>gn</tag>
+    <description>generic natural</description>
   </snippet>
   <snippet>
-    <tag>gt</tag>
     <description>generic time</description>
+    <tag>gt</tag>
     <text><![CDATA[${1:ADL}		: time 	:= ${2:500 ps};
 $0]]></text>
   </snippet>
   <snippet>
-    <tag>h</tag>
-    <description>header</description>
     <text><![CDATA[--------------------------------------------------------------------------------
 -- Company: Astri Polska
 -- Engineer: Sławomir Siluk slawomir.siluk@astripolska.pl
@@ -122,57 +120,59 @@ $0]]></text>
 -- Additional Comments:
 -- 
 --------------------------------------------------------------------------------]]></text>
+    <tag>h</tag>
+    <description>header</description>
   </snippet>
   <snippet>
+    <text><![CDATA[${1:name}	: in std_logic_vector($0 downto 0);]]></text>
     <tag>iv</tag>
     <description>input std_logic_vector</description>
-    <text><![CDATA[${1:name}	: in std_logic_vector($0 downto 0);]]></text>
   </snippet>
   <snippet>
-    <tag>il</tag>
-    <description>input std_logic</description>
     <text><![CDATA[$1		: in std_logic;
 $0]]></text>
+    <tag>il</tag>
+    <description>input std_logic</description>
   </snippet>
   <snippet>
-    <tag>lw</tag>
     <description>library work</description>
+    <tag>lw</tag>
     <text><![CDATA[library work;
 use work.${1:common_pkg}.all;
 $0]]></text>
   </snippet>
   <snippet>
-    <tag>lx</tag>
     <description>library xil_defaultlib</description>
+    <tag>lx</tag>
     <text><![CDATA[library xil_defaultlib;
 use xil_defaultlib.${1:common_pkg}.all;
 $0]]></text>
   </snippet>
   <snippet>
+    <text><![CDATA[<div class="${1:text}">This div has class: ${1}</div>]]></text>
     <tag>ex</tag>
     <description>New snippet</description>
-    <text><![CDATA[<div class="${1:text}">This div has class: ${1}</div>]]></text>
   </snippet>
   <snippet>
-    <tag>sb</tag>
-    <description>New snippet</description>
     <text><![CDATA[signal ${1}	: boolean := false;
 $0]]></text>
+    <tag>sb</tag>
+    <description>New snippet</description>
   </snippet>
   <snippet>
+    <text><![CDATA[${1} : out std_logic_vector($2 downto 0);$0]]></text>
     <tag>ov</tag>
     <description>output std_logic_vector</description>
-    <text><![CDATA[${1} : out std_logic_vector($2 downto 0);$0]]></text>
   </snippet>
   <snippet>
-    <tag>ol</tag>
-    <description>output std_logic</description>
     <text><![CDATA[$1		: out std_logic;
 $0]]></text>
+    <tag>ol</tag>
+    <description>output std_logic</description>
   </snippet>
   <snippet>
-    <tag>pe</tag>
     <description>reg ce</description>
+    <tag>pe</tag>
     <text><![CDATA[${1}_proc: process(clk) begin
 if rising_edge(clk) then
 	if ce = '1' then
@@ -183,18 +183,18 @@ end process;
 $0]]></text>
   </snippet>
   <snippet>
-    <tag>pc</tag>
-    <description>reg clk</description>
     <text><![CDATA[${1}_proc: process(clk) begin
 if rising_edge(clk) then
 	${2}
 end if;
 end process;
 $0]]></text>
+    <tag>pc</tag>
+    <description>reg clk</description>
   </snippet>
   <snippet>
-    <tag>pr</tag>
     <description>reg rst</description>
+    <tag>pr</tag>
     <text><![CDATA[_proc: process(clk) begin
 if rising_edge(clk) then
 	if rst = '1' then
@@ -206,8 +206,8 @@ end if;
 end process;]]></text>
   </snippet>
   <snippet>
-    <tag>p</tag>
     <description>reg rst ce</description>
+    <tag>p</tag>
     <text><![CDATA[_proc: process(clk) begin
 if rising_edge(clk) then
 	if rst = '1' then
@@ -219,16 +219,16 @@ end if;
 end process;]]></text>
   </snippet>
   <snippet>
-    <tag>rf</tag>
     <description>report failure</description>
+    <tag>rf</tag>
     <text><![CDATA[assert ${1} = I
  report " <<<FAILURE>>> ${2: not matching on index:} " & integer'image(I)
  severity failure;
 $0]]></text>
   </snippet>
   <snippet>
-    <tag>rs</tag>
     <description>report success</description>
+    <tag>rs</tag>
     <text><![CDATA[wait for LDL;
 assert false
  report " <<<SUCCESS>>> "
@@ -237,27 +237,25 @@ wait;
 $0]]></text>
   </snippet>
   <snippet>
+    <text><![CDATA[signal ${1} : natural ${2:range 0 to};$0]]></text>
     <tag>sn</tag>
     <description>signal natural</description>
-    <text><![CDATA[signal ${1}		: natural ${2:range 0 to};
-$0]]></text>
   </snippet>
   <snippet>
-    <tag>sv</tag>
-    <description>signal std_logic_vector</description>
     <text><![CDATA[signal ${1}		: std_logic_vector(${2} downto 0);
 $0
 ]]></text>
+    <tag>sv</tag>
+    <description>signal std_logic_vector</description>
   </snippet>
   <snippet>
+    <text><![CDATA[signal ${1} : std_logic := '0';$0]]></text>
     <tag>sl</tag>
     <description>signal std_logic</description>
-    <text><![CDATA[signal ${1}		: std_logic := '0';
-$0]]></text>
   </snippet>
   <snippet>
-    <tag>ts</tag>
     <description>state type</description>
+    <tag>ts</tag>
     <text><![CDATA[type state_type is 	(
 						IDLE_STATE
 					);
@@ -265,14 +263,14 @@ signal state	: state_type := IDLE_STATE;
 $0]]></text>
   </snippet>
   <snippet>
-    <tag>wf</tag>
-    <description>wait for</description>
     <text><![CDATA[wait for ${1:LDL};
 $0]]></text>
+    <tag>wf</tag>
+    <description>wait for</description>
   </snippet>
   <snippet>
-    <tag>wu</tag>
     <description>wait until re(clk)</description>
+    <tag>wu</tag>
     <text><![CDATA[wait until rising_edge(clk);
 $0]]></text>
   </snippet>
