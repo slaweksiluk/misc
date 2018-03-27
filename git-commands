@@ -57,3 +57,11 @@ git checkout --patch B f
 #Simple Way to remove untracked files
 #To remove all untracked files, The simple way is to add all of them first and reset the repo as below
 git add --all
+
+# Remove from git, but not from filesystem
+#For single file:
+  git rm --cached mylogfile.log
+#For single directory:
+  git rm --cached -r mydirectory
+
+
