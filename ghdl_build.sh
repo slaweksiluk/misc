@@ -1,6 +1,17 @@
 #!/bin/bash
 # This script builds GHDL with gcc backend
 # TODO parse sources directories from cmd line
+# TODO fix below (currenlty the easiest workaround is to remove build from
+# ghdl dir):
+#configure: error: `M4' has changed since the previous run:
+#configure:   former value:  `/home/slawek/sources/gcc-7.3.0/missing m4'
+#configure:   current value: `m4'
+#configure: error: `YACC' has changed since the previous run:
+#configure:   former value:  `/home/slawek/sources/gcc-7.3.0/missing bison -y'
+#configure:   current value: `bison -y'
+#configure: error: in `/home/slawek/git/github/ghdl/build/gcc-objs/gmp':
+#configure: error: changes in the environment can compromise the build
+#configure: error: run `make distclean' and/or `rm ./config.cache' and start over
 
 # Paramaters
 GHDL_SRC_DIR="$HOME/git/github/ghdl"
