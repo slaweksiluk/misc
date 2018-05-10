@@ -63,5 +63,8 @@ git add --all
   git rm --cached mylogfile.log
 #For single directory:
   git rm --cached -r mydirectory
+  
+# list files in dir/ directory containing phrases foo and bar
+git grep -l --all-match -e 'foo' -e 'bar' -- dir/
 
 
