@@ -2,6 +2,9 @@
 **Clones revision X of gtkwave**
 >`git svn clone -rX:HEAD svn://svn.code.sf.net/p/gtkwave/code/ gtkwave-code`
 
+**Rebase svn to latest server commit**
+>`git svn rebase`
+
 **For what?**
 >`git update-index --assume-unchanged [file]`
 
