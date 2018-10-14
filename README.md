@@ -2,6 +2,9 @@
 **Clones revision X of gtkwave**
 >`git svn clone -rX:HEAD svn://svn.code.sf.net/p/gtkwave/code/ gtkwave-code`
 
+**Rebase svn to latest server commit**
+>`git svn rebase`
+
 **For what?**
 >`git update-index --assume-unchanged [file]`
 
@@ -39,6 +42,12 @@ git checkout master
 
 **Next time you have changed a file and want to restore it to the state it is in the index, don't delete the file first, just do**
 `git checkout -- path/to/foo`
+
+**Solutions for merge conflicts**
+ When local file version is proper one
+`git checkout HEAD -- path/to/myfile.txt`
+ When remote branch file version is desired
+`git checkout remote/branch_to_merge -- path/to/myfile.txt`
 
 **Pokazuje roznie miedzy tagami z uzglednienime zmian nazw/katalogow**
 >`git diff 0.6.7 0.6.8 --stat -C HEAD HEAD^^`
