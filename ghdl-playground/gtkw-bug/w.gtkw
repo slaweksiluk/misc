@@ -1,0 +1,28 @@
+[*]
+[*] GTKWave Analyzer v3.3.96 (w)1999-2018 BSI
+[*] Wed Oct 31 18:20:42 2018
+[*]
+[dumpfile] "/home/slawek/git/github/misc/ghdl-playground/gtkw-bug/w.ghw"
+[dumpfile_mtime] "Wed Oct 31 18:20:40 2018"
+[dumpfile_size] 460
+[savefile] "/home/slawek/git/github/misc/ghdl-playground/gtkw-bug/w.gtkw"
+[timestart] 0
+[size] 1360 714
+[pos] -1 -1
+*-19.009371 1593000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.wb_demux_tb.
+[treeopen] top.wb_demux_tb.s.
+[sst_width] 229
+[signals_width] 318
+[sst_expanded] 1
+[sst_vpaned_height] 177
+@c00029
+#{top.wb_demux_tb.s.dat[31:0]} top.wb_demux_tb.s.dat[1] top.wb_demux_tb.s.dat[0]
+@29
+top.wb_demux_tb.s.dat[1]
+top.wb_demux_tb.s.dat[0]
+@1401201
+-group_end
+[pattern_trace] 1
+[pattern_trace] 0
