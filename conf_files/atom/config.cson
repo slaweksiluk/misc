@@ -1,0 +1,31 @@
+"*":
+  ATOMato:
+    "Ghdl path": "ghdl"
+  "atom-ide-ui":
+    "atom-ide-diagnostics-ui": {}
+  core:
+    customFileTypes:
+      "source.groovy": [
+        "gsh"
+      ]
+    disabledPackages: [
+      "linter-vhdl"
+      "line-diff-details"
+      "ATOMato"
+      "linter"
+      "linter-jenkins"
+      "language-groovy"
+    ]
+    openEmptyEditorOnStart: false
+    restorePreviousWindowsOnStart: "always"
+    telemetryConsent: "no"
+  editor:
+    fontSize: 16
+    tabLength: 4
+  "exception-reporting":
+    userId: "67ffb595-13a2-4905-b5f1-a3cf3ada7cc0"
+  "ide-vhdl":
+    vhdlLanguageServer:
+      command: "docker"
+  "linter-ui-default": {}
+  whitespace: {}
